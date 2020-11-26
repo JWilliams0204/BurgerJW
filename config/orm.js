@@ -9,7 +9,7 @@ var orm = {
         cb(result);
         console.log(result);
     },
-    insertBurger: function(answer, cb) {
+    insertOne: function(answer, cb) {
         connection.query("INSERT INTO burgers SET ?", [answer], function(err, result) {
             if(err) throw err;
             cb(result);
@@ -17,7 +17,7 @@ var orm = {
             
         })
     },
-    updateBurger: function(answer, cb) {
+    updateOne: function(answer, cb) {
         connection.query("Update new burgers SET ? where Id =?", [newBurger, oldBurger], function(err, result) {
          if(err) throw err;   
         }),

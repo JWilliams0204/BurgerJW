@@ -15,7 +15,7 @@ router.get("/", function(req, res) {
 });
 
 router.post("/api/burgers", function(req, res){
-    burger.insertBurger(
+    burger.insertOne(
         ["burger_name"], [req.body.name],
         function(result) {
             res.redirect("/");
@@ -26,7 +26,7 @@ router.post("/api/burgers", function(req, res){
 router.get("/api/burgers/:id", function(req, res) {
     const oldBurg = "id =" + req.params.id;
     
-    burger.updateBurger({
+    burger.updateOne({
         devoured: true,
     }), 
     oldBurg, function(result) {
