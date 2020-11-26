@@ -29,4 +29,4 @@ const burger = {
     
 };
 //exports the database functions to the controller
-module.exports = burgers;
+module.exports = burger;
