@@ -2,7 +2,7 @@
 <h1>Eat a burger!</h1>
 <p>Click Devour! to eat!</p>
 {{#each burger}}
-{{#unless ate}}
+{{#unless devour}}
 <form action="/api/burgers/{{this.id}}" method="Put">
 <p>{{this.burger_name}}</p>
 <button type="submit">Devour!</button>
@@ -15,7 +15,7 @@
 <div id="ate">
     <h1>Burgers you've ate!</h1>
     {{#each burger}}
-    {{#if ate}}
+    {{#if devour}}
     <button>{{this.burger_name}}</button>
     {{/each}}
     {{/if}} 
